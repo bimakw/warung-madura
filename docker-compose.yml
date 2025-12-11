@@ -1,0 +1,11 @@
+services:
+  warung-madura:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: warung-madura
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
