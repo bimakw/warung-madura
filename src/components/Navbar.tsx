@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/context/AuthContext";
 import { useState } from "react";
 
 export default function Navbar() {
   const { totalItems } = useCart();
+  const { user, logout } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -39,6 +41,23 @@ export default function Navbar() {
                 </span>
               )}
             </Link>
+            {user ? (
+              <Link
+                href="/profil"
+                className="flex items-center gap-2 hover:text-amber-200 transition-colors"
+              >
+                <span className="w-8 h-8 bg-amber-700 rounded-full flex items-center justify-center text-sm font-bold">
+                  {user.name.charAt(0).toUpperCase()}
+                </span>
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                className="bg-amber-700 px-4 py-2 rounded-lg hover:bg-amber-800 transition-colors"
+              >
+                Masuk
+              </Link>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,6 +101,24 @@ export default function Navbar() {
               <span>🛒</span>
               <span>Keranjang ({totalItems})</span>
             </Link>
+            {user ? (
+              <Link
+                href="/profil"
+                className="flex items-center gap-2 hover:text-amber-200 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span>👤</span>
+                <span>Profil ({user.name})</span>
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                className="block bg-amber-700 px-4 py-2 rounded-lg text-center hover:bg-amber-800 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Masuk
+              </Link>
+            )}
           </div>
         )}
       </div>
