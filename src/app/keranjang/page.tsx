@@ -106,13 +106,20 @@ export default function KeranjangPage() {
                 *Gratis ongkir untuk radius 3km dari toko
               </p>
 
+              <Link
+                href="/checkout"
+                className="block w-full bg-amber-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors mb-3"
+              >
+                Lanjut ke Checkout
+              </Link>
+
               <a
                 href={`https://wa.me/${storeInfo.whatsapp}?text=${generateWhatsAppMessage()}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-green-500 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors mb-3"
               >
-                💬 Pesan via WhatsApp
+                💬 Pesan Cepat via WhatsApp
               </a>
 
               <Link
