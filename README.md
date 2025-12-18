@@ -1,10 +1,10 @@
 # Warung Madura
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://warung-madura.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://warung-madura-benno.netlify.app)
 
 A modern e-commerce web application for traditional Indonesian convenience store (warung), built with Next.js and TypeScript.
 
-**Live Demo:** [warung-madura.netlify.app](https://warung-madura.netlify.app)
+**Live Demo:** [warung-madura-benno.netlify.app](https://warung-madura-benno.netlify.app)
 
 ## Features
 
