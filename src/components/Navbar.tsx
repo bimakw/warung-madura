@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { useAuth } from "@/context/AuthContext";
+import { useTheme } from "@/context/ThemeContext";
 import { useState } from "react";
 
 export default function Navbar() {
   const { totalItems } = useCart();
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -41,6 +43,13 @@ export default function Navbar() {
                 </span>
               )}
             </Link>
+            <button
+              onClick={toggleTheme}
+              className="p-2 hover:text-amber-200 transition-colors text-xl"
+              aria-label="Toggle theme"
+            >
+              {theme === "light" ? "🌙" : "☀️"}
+            </button>
             {user ? (
               <Link
                 href="/profil"
@@ -101,6 +110,13 @@ export default function Navbar() {
               <span>🛒</span>
               <span>Keranjang ({totalItems})</span>
             </Link>
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-2 hover:text-amber-200 transition-colors"
+            >
+              <span>{theme === "light" ? "🌙" : "☀️"}</span>
+              <span>{theme === "light" ? "Mode Gelap" : "Mode Terang"}</span>
+            </button>
             {user ? (
               <Link
                 href="/profil"
