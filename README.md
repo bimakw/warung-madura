@@ -1,6 +1,10 @@
 # Warung Madura
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://warung-madura.netlify.app)
+
 A modern e-commerce web application for traditional Indonesian convenience store (warung), built with Next.js and TypeScript.
+
+**Live Demo:** [warung-madura.netlify.app](https://warung-madura.netlify.app)
 
 ## Features
 
@@ -16,7 +20,7 @@ A modern e-commerce web application for traditional Indonesian convenience store
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: React Context API
-- **Deployment**: Docker support
+- **Deployment**: Netlify (Static Export) / Docker
 
 ## Getting Started
 
@@ -82,9 +86,16 @@ warung-madura/
 | `/checkout/success` | Order confirmation |
 | `/kontak` | Contact information |
 
-## Screenshots
+## Deployment
 
-*Coming soon*
+### Netlify (Recommended)
+
+1. Connect your GitHub repository to Netlify
+2. Build settings are auto-detected from `netlify.toml`
+3. Deploy!
+
+Build command: `npm run build`
+Publish directory: `out`
 
 ## License
 
