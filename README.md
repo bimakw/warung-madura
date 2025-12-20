@@ -1,6 +1,10 @@
 # Warung Madura
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://warung-madura-benno.netlify.app)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 A modern e-commerce web application for traditional Indonesian convenience store (warung), built with Next.js and TypeScript.
 
@@ -8,26 +12,30 @@ A modern e-commerce web application for traditional Indonesian convenience store
 
 ## Features
 
-- **Product Catalog**: Browse products by category with search and filter
-- **Product Details**: Individual product pages with related items
-- **Shopping Cart**: Add, remove, update quantities
-- **Checkout Flow**: Customer form with validation and WhatsApp integration
-- **Responsive Design**: Mobile-first design with Tailwind CSS
+- **Product Catalog** - Browse products by category with search and filter
+- **Shopping Cart** - Add, remove, update quantities with persistent storage
+- **Checkout Flow** - Customer form with WhatsApp integration
+- **Dark Mode** - Toggle between light and dark themes
+- **Wishlist** - Save favorite products
+- **PWA Ready** - Installable as mobile app
+- **Responsive** - Mobile-first design with Tailwind CSS
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **State Management**: React Context API
-- **Deployment**: Netlify (Static Export) / Docker
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS 4 |
+| State | React Context API |
+| Deployment | Netlify / Docker |
 
-## Getting Started
+## Quick Start
 
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn
+- npm, yarn, or pnpm
 
 ### Installation
 
@@ -48,55 +56,78 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 ### Docker
 
 ```bash
-# Build and run with Docker
+# Using docker-compose (recommended)
+docker compose up -d
+
+# Or build manually
 docker build -t warung-madura .
 docker run -p 3000:3000 warung-madura
-
-# Or use docker-compose
-docker compose up -d
 ```
 
 ## Project Structure
 
 ```
-warung-madura/
-├── src/
-│   ├── app/                 # Next.js App Router pages
-│   │   ├── checkout/        # Checkout flow
-│   │   ├── keranjang/       # Shopping cart
-│   │   ├── kontak/          # Contact page
-│   │   └── produk/          # Product catalog & details
-│   ├── components/          # Reusable components
-│   ├── context/             # React Context (Cart)
-│   ├── data/                # Static data (products, store info)
-│   └── types/               # TypeScript interfaces
-├── public/                  # Static assets
-└── ...config files
+src/
+├── app/                    # Next.js App Router pages
+│   ├── checkout/           # Checkout flow
+│   ├── keranjang/          # Shopping cart
+│   ├── kontak/             # Contact page
+│   ├── login/              # User login
+│   ├── profil/             # User profile
+│   ├── produk/             # Product catalog & details
+│   └── register/           # User registration
+├── components/             # Reusable UI components
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── ProductCard.tsx
+│   ├── CartItem.tsx
+│   └── PromoBanner.tsx
+├── context/                # React Context providers
+│   ├── AuthContext.tsx
+│   ├── CartContext.tsx
+│   ├── ThemeContext.tsx
+│   └── WishlistContext.tsx
+├── data/                   # Static data
+│   ├── products.ts
+│   └── store.ts
+└── types/                  # TypeScript interfaces
 ```
 
-## Pages
+## Available Scripts
 
-| Route | Description |
-|-------|-------------|
-| `/` | Landing page |
-| `/produk` | Product catalog with search & filter |
-| `/produk/[id]` | Product detail page |
-| `/keranjang` | Shopping cart |
-| `/checkout` | Checkout with customer form |
-| `/checkout/success` | Order confirmation |
-| `/kontak` | Contact information |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-## Deployment
+## Contributing
 
-### Netlify (Recommended)
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-1. Connect your GitHub repository to Netlify
-2. Build settings are auto-detected from `netlify.toml`
-3. Deploy!
+### Quick Steps
 
-Build command: `npm run build`
-Publish directory: `out`
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Deployed on [Netlify](https://netlify.com/)
+
+---
+
+Made with ❤️ in Indonesia
