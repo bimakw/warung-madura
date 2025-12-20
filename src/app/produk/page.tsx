@@ -60,7 +60,7 @@ export default function ProdukPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 text-white">
+      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-500 via-indigo-600 to-blue-600 text-white">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-5 left-10 text-6xl">📦</div>
@@ -75,7 +75,7 @@ export default function ProdukPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 tracking-tight">
             Katalog Produk
           </h1>
-          <p className="text-amber-100 text-lg">
+          <p className="text-indigo-100 text-lg">
             Temukan berbagai kebutuhan sehari-hari Anda
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function ProdukPage() {
               <div className="flex-1 relative">
                 <div
                   className={`relative flex items-center transition-all duration-200 ${
-                    isSearchFocused ? "ring-2 ring-amber-500 ring-offset-2 dark:ring-offset-gray-800" : ""
+                    isSearchFocused ? "ring-2 ring-indigo-500 ring-offset-2 dark:ring-offset-gray-800" : ""
                   }`}
                 >
                   <span className="absolute left-4 text-gray-400 text-lg">🔍</span>
@@ -126,7 +126,7 @@ export default function ProdukPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
-                  className="appearance-none w-full sm:w-auto px-4 py-3 pr-10 bg-gray-50 dark:bg-gray-700 border-0 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-800 dark:text-gray-100 font-medium cursor-pointer transition-all"
+                  className="appearance-none w-full sm:w-auto px-4 py-3 pr-10 bg-gray-50 dark:bg-gray-700 border-0 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-800 dark:text-gray-100 font-medium cursor-pointer transition-all"
                 >
                   <option value="default">⚡ Urutkan</option>
                   <option value="price-asc">💰 Harga: Rendah ke Tinggi</option>
@@ -148,7 +148,7 @@ export default function ProdukPage() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category
-                      ? "bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/25"
+                      ? "bg-gradient-to-r from-indigo-500 to-blue-500 text-white shadow-lg shadow-indigo-500/25"
                       : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                   }`}
                 >
@@ -160,7 +160,7 @@ export default function ProdukPage() {
               {hasActiveFilters && (
                 <button
                   onClick={clearFilters}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 hover:bg-red-200 dark:hover:bg-red-900/50 transition-colors flex items-center gap-1"
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 hover:bg-rose-200 dark:hover:bg-rose-900/50 transition-colors flex items-center gap-1"
                 >
                   <span>✕</span> Reset
                 </button>
@@ -178,7 +178,7 @@ export default function ProdukPage() {
             </span>{" "}
             produk
             {selectedCategory !== "Semua" && (
-              <span className="text-amber-600 dark:text-amber-400">
+              <span className="text-indigo-600 dark:text-indigo-400">
                 {" "}
                 di kategori {selectedCategory}
               </span>
@@ -206,7 +206,7 @@ export default function ProdukPage() {
             </p>
             <button
               onClick={clearFilters}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-colors"
             >
               <span>🔄</span> Reset Filter
             </button>

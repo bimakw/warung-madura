@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-              <span className="w-1 h-5 bg-amber-500 rounded-full" />
+              <span className="w-1 h-5 bg-indigo-500 rounded-full" />
               Navigasi
             </h3>
             <ul className="space-y-3">
@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Categories */}
           <div>
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-              <span className="w-1 h-5 bg-amber-500 rounded-full" />
+              <span className="w-1 h-5 bg-indigo-500 rounded-full" />
               Kategori
             </h3>
             <ul className="space-y-3">
@@ -68,7 +68,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-              <span className="w-1 h-5 bg-amber-500 rounded-full" />
+              <span className="w-1 h-5 bg-indigo-500 rounded-full" />
               Hubungi Kami
             </h3>
             <ul className="space-y-4 text-sm">
@@ -80,14 +80,14 @@ export default function Footer() {
                 <span className="text-lg flex-shrink-0">📞</span>
                 <a
                   href={`tel:${storeInfo.phone}`}
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-indigo-400 transition-colors"
                 >
                   {storeInfo.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-lg flex-shrink-0">⏰</span>
-                <span className="text-amber-400 font-medium">{storeInfo.openHours}</span>
+                <span className="text-indigo-400 font-medium">{storeInfo.openHours}</span>
               </li>
             </ul>
 
@@ -96,7 +96,7 @@ export default function Footer() {
               href={`https://wa.me/${storeInfo.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white text-sm font-semibold rounded-xl hover:from-green-600 hover:to-green-700 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
+              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-600 hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
             >
               💬 Chat WhatsApp
             </a>
@@ -112,7 +112,7 @@ export default function Footer() {
               © {currentYear} {storeInfo.name}. Hak Cipta Dilindungi.
             </p>
             <p className="flex items-center gap-1">
-              Dibuat dengan <span className="text-red-500">❤️</span> di Indonesia
+              Dibuat dengan <span className="text-rose-500">❤️</span> di Indonesia
             </p>
           </div>
         </div>
@@ -132,9 +132,9 @@ function FooterLink({
     <li>
       <Link
         href={href}
-        className="text-gray-400 hover:text-amber-400 transition-colors inline-flex items-center gap-1 group"
+        className="text-gray-400 hover:text-indigo-400 transition-colors inline-flex items-center gap-1 group"
       >
-        <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 transition-all duration-200 rounded-full" />
+        <span className="w-0 group-hover:w-2 h-0.5 bg-indigo-500 transition-all duration-200 rounded-full" />
         {children}
       </Link>
     </li>
@@ -156,7 +156,7 @@ function SocialButton({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="w-10 h-10 rounded-xl bg-gray-800 hover:bg-amber-600 flex items-center justify-center text-lg transition-all duration-200 hover:scale-110 hover:-translate-y-0.5"
+      className="w-10 h-10 rounded-xl bg-gray-800 hover:bg-indigo-600 flex items-center justify-center text-lg transition-all duration-200 hover:scale-110 hover:-translate-y-0.5"
     >
       {children}
     </a>
