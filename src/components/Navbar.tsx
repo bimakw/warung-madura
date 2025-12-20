@@ -25,8 +25,8 @@ export default function Navbar() {
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-amber-600/95 backdrop-blur-md shadow-lg shadow-amber-900/10"
-          : "bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500"
+          ? "bg-indigo-600/95 backdrop-blur-md shadow-lg shadow-indigo-900/10"
+          : "bg-gradient-to-r from-indigo-500 via-indigo-600 to-blue-600"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -57,7 +57,7 @@ export default function Navbar() {
             >
               <span className="text-xl">🛒</span>
               {totalItems > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1.5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center ring-2 ring-amber-600 animate-pulse">
+                <span className="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1.5 bg-rose-500 text-white text-xs font-bold rounded-full flex items-center justify-center ring-2 ring-indigo-600 animate-pulse">
                   {totalItems}
                 </span>
               )}
@@ -78,7 +78,7 @@ export default function Navbar() {
                 href="/profil"
                 className="ml-2 flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-200 group"
               >
-                <span className="w-7 h-7 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-inner">
+                <span className="w-7 h-7 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-inner">
                   {user.name.charAt(0).toUpperCase()}
                 </span>
                 <span className="text-sm font-medium text-white/90 group-hover:text-white hidden lg:block">
@@ -88,7 +88,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/login"
-                className="ml-2 px-5 py-2 rounded-full bg-white text-amber-700 font-semibold text-sm hover:bg-amber-50 hover:shadow-lg hover:shadow-amber-900/20 transition-all duration-200 hover:-translate-y-0.5"
+                className="ml-2 px-5 py-2 rounded-full bg-white text-indigo-700 font-semibold text-sm hover:bg-indigo-50 hover:shadow-lg hover:shadow-indigo-900/20 transition-all duration-200 hover:-translate-y-0.5"
               >
                 Masuk
               </Link>
@@ -156,7 +156,7 @@ export default function Navbar() {
               <Link
                 href="/login"
                 onClick={() => setIsMenuOpen(false)}
-                className="block mx-2 mt-2 px-4 py-3 text-center rounded-xl bg-white text-amber-700 font-semibold hover:bg-amber-50 transition-colors"
+                className="block mx-2 mt-2 px-4 py-3 text-center rounded-xl bg-white text-indigo-700 font-semibold hover:bg-indigo-50 transition-colors"
               >
                 Masuk
               </Link>

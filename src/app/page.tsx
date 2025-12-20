@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-500 via-indigo-600 to-blue-600 text-white">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 text-8xl">🏪</div>
@@ -20,13 +20,13 @@ export default function Home() {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-amber-600/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-indigo-700/50 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
           <div className="text-center">
             {/* Badge */}
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white/90 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               Buka 24 Jam Non-Stop
             </span>
 
@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl lg:text-2xl mb-3 text-amber-100 font-medium">
+            <p className="text-lg sm:text-xl lg:text-2xl mb-3 text-indigo-100 font-medium">
               {storeInfo.openHours}
             </p>
             <p className="text-base sm:text-lg max-w-2xl mx-auto mb-8 text-white/80">
@@ -48,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/produk"
-                className="inline-flex items-center justify-center gap-2 bg-white text-amber-600 px-8 py-3.5 rounded-full font-semibold text-lg hover:bg-amber-50 hover:shadow-xl hover:shadow-amber-900/20 transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-white text-indigo-600 px-8 py-3.5 rounded-full font-semibold text-lg hover:bg-indigo-50 hover:shadow-xl hover:shadow-indigo-900/20 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span>🛍️</span> Lihat Produk
               </Link>
@@ -56,7 +56,7 @@ export default function Home() {
                 href={`https://wa.me/${storeInfo.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white px-8 py-3.5 rounded-full font-semibold text-lg hover:bg-white hover:text-amber-600 transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/80 text-white px-8 py-3.5 rounded-full font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span>💬</span> Hubungi Kami
               </a>
@@ -90,7 +90,7 @@ export default function Home() {
           >
             <path
               d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-              className="fill-amber-50 dark:fill-gray-800"
+              className="fill-indigo-50 dark:fill-gray-800"
             />
           </svg>
         </div>
@@ -100,10 +100,10 @@ export default function Home() {
       <PromoBanner />
 
       {/* Keunggulan */}
-      <section className="py-16 lg:py-20 bg-amber-50 dark:bg-gray-800">
+      <section className="py-16 lg:py-20 bg-indigo-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-amber-600 dark:text-amber-400 font-semibold text-sm uppercase tracking-wider">
+            <span className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider">
               Keunggulan Kami
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 mt-2">
@@ -117,19 +117,19 @@ export default function Home() {
                 emoji: "⏰",
                 title: "Buka 24 Jam",
                 description: "Selalu siap melayani kebutuhan Anda kapan saja, siang maupun malam.",
-                gradient: "from-blue-500 to-cyan-500",
+                gradient: "from-indigo-500 to-blue-500",
               },
               {
                 emoji: "💰",
                 title: "Harga Terjangkau",
                 description: "Produk berkualitas dengan harga yang ramah di kantong.",
-                gradient: "from-green-500 to-emerald-500",
+                gradient: "from-emerald-500 to-teal-500",
               },
               {
                 emoji: "📦",
                 title: "Produk Lengkap",
                 description: "Menyediakan berbagai kebutuhan sehari-hari dalam satu tempat.",
-                gradient: "from-purple-500 to-pink-500",
+                gradient: "from-violet-500 to-purple-500",
               },
             ].map((item, index) => (
               <div
@@ -158,7 +158,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
             <div>
-              <span className="text-amber-600 dark:text-amber-400 font-semibold text-sm uppercase tracking-wider">
+              <span className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider">
                 Pilihan Terbaik
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 mt-1">
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
             <Link
               href="/produk"
-              className="group inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 font-semibold transition-colors"
+              className="group inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-semibold transition-colors"
             >
               Lihat Semua
               <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -189,7 +189,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2">
               {/* Content */}
               <div className="p-8 lg:p-12">
-                <span className="text-amber-600 dark:text-amber-400 font-semibold text-sm uppercase tracking-wider">
+                <span className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider">
                   Temukan Kami
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 mt-2 mb-6">
@@ -212,7 +212,7 @@ export default function Home() {
                         <p
                           className={`font-medium ${
                             item.highlight
-                              ? "text-amber-600 dark:text-amber-400"
+                              ? "text-indigo-600 dark:text-indigo-400"
                               : "text-gray-700 dark:text-gray-200"
                           }`}
                         >
@@ -227,17 +227,17 @@ export default function Home() {
                   href={`https://wa.me/${storeInfo.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-8 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 mt-8 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <span>💬</span> Chat via WhatsApp
                 </a>
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-gradient-to-br from-amber-100 via-amber-50 to-orange-100 dark:from-gray-600 dark:via-gray-600 dark:to-gray-500 h-64 md:h-auto flex items-center justify-center">
+              <div className="bg-gradient-to-br from-indigo-100 via-blue-50 to-sky-100 dark:from-gray-600 dark:via-gray-600 dark:to-gray-500 h-64 md:h-auto flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="text-7xl lg:text-8xl mb-4 animate-bounce">🗺️</div>
-                  <p className="text-amber-700 dark:text-amber-200 font-medium">
+                  <p className="text-indigo-700 dark:text-indigo-200 font-medium">
                     Peta lokasi akan ditampilkan di sini
                   </p>
                 </div>
