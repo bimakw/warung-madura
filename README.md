@@ -101,6 +101,22 @@ src/
 | `npm run build` | Build for production |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
+| `npm run test` | Run tests in watch mode |
+| `npm run test:run` | Run tests once |
+
+## Testing
+
+```bash
+# Run tests once
+npm run test:run
+
+# Run tests in watch mode
+npm run test
+```
+
+| Module | Tests |
+|--------|-------|
+| CartContext | 11 |
 
 ## Contributing
 
